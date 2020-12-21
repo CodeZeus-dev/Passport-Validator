@@ -9,11 +9,11 @@ function fieldExtractor(fieldName) {
         case 'eyr':
             return RegExp('(?:eyr\:)((202[0-9])|(2030))');
         case 'hgt':
-            return RegExp('(?:hgt)((?:\:)1([5-8][0-9]|9[0-3])cm)|((?:hgt)(?:\:)(59|6[0-9]|7[0-6])in)');
+            return RegExp('(?:hgt)((?:\:)1([5-8][0-9]|9[0-3])cm)|((?:hgt)(?:\:)(59|6[0-9]|7[0-6])in)([^0-9])');
         case 'ecl':
             return RegExp('(?:ecl\:)(amb|blu|brn|gry|grn|hzl|oth)');
         case 'pid':
-            return RegExp('(?:pid\:)([0-9]{9})([^0-9]*)');
+            return RegExp('(?:pid\:)([0-9]{9})([^0-9])');
     }
 }
 
